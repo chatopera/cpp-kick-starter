@@ -1,5 +1,24 @@
+.vscode
+*.swp
+*.swo
+*.sublime-*
+*.pyc
+jmeter.log
+__pycache__
+tmp/
+node_modules/
+sftp-config.json
+.DS_Store
+*.iml
+*.ipr
+*.iws
+*.idea
+~$*.xls*
+~$*.ppt*
+~$*.doc*
+nohup.out
+
 # Compiled Object files
-**/.DS_Store
 *.slo
 *.lo
 *.o
@@ -29,6 +48,17 @@
 *.out
 *.app
 
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
 **/cmake-build-debug
 **/CMakeCache.txt
 **/cmake_install.cmake
@@ -41,21 +71,5 @@
 **/compile_commands.json
 
 include/divisible/*
-bin/*
-lib/*
 test/test_runner
-
-## Local 
-
-.idea/workspace.xml
-
-build/release/*
-build/debug/*
-build/run/*
-
-include/*
-lib/*
-bin/*
 .bash/
-bin/bootstrap
-bin/lib-bash
