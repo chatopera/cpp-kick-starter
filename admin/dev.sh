@@ -17,16 +17,7 @@ cd $baseDir/..
 set -x
 docker run --rm \
     -d \
-    -v $PWD/admin:/workspace/admin \
-    -v $PWD/bin:/workspace/bin \
-    -v $PWD/docs:/workspace/docs \
-    -v $PWD/build:/workspace/build \
-    -v $PWD/lib:/workspace/lib \
-    -v $PWD/src:/workspace/src \
-    -v $PWD/test:/workspace/test \
-    -v $PWD/tmp:/workspace/tmp \
-    -v $PWD/include:/workspace/include \
-    -v $PWD/CMakeLists.txt:/workspace/CMakeLists.txt \
+    -v $PWD:/workspace \
     --name cmake \
     $imageid \
     tail -f /dev/null
