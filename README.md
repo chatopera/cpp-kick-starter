@@ -6,11 +6,29 @@ Cpp Project Skeleton.
 
 You will need:
 
-- A modern C/C++ compiler
+- Docker
 - CMake 3.1+ installed (on a Mac, run `brew install cmake`)
 - If you prefer to code in a great IDE, I highly recommend [VSCode](https://code.visualstudio.com/). It is fully compatible with this project.
 
 ## Bootstrap
+
+Run a docker instance and start work.
+
+```
+./admin/dev.sh
+```
+
+## Install Deps
+
+Install the basic dependencies.
+
+```
+./admin/install-3rd.sh
+```
+
+This script would execute every command in `cmake/install` in order.
+
+## Development
 
 ```
 mkdir -p build/debug
