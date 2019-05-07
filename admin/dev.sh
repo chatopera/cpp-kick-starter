@@ -17,6 +17,7 @@ cd $baseDir/..
 set -x
 docker run --rm \
     -d \
+    -p 9870-9880:9870-9880 \
     -v $PWD:/workspace \
     --name cmake \
     $imageid \

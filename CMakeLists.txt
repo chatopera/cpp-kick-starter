@@ -18,6 +18,5 @@ set(ROOT_INSTALL_LIB_DIR ${PROJECT_SOURCE_DIR}/lib)
 include_directories(${ROOT_INSTALL_INCLUDE_DIR})
 
 add_subdirectory(src)
-add_subdirectory(test)
 
 

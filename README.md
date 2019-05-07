@@ -1,6 +1,16 @@
+[![Docker Layers](https://images.microbadger.com/badges/image/chatopera/cmake:3.14.3.svg)](https://microbadger.com/images/chatopera/cmake:3.14.3 "Get your own image badge on microbadger.com") [![Docker Version](https://images.microbadger.com/badges/version/chatopera/cmake:3.14.3.svg)](https://microbadger.com/images/chatopera/cmake:3.14.3 "Get your own version badge on microbadger.com") [![Docker Pulls](https://img.shields.io/docker/pulls/chatopera/cmake.svg)](https://hub.docker.com/r/chatopera/cmake/) [![Docker Stars](https://img.shields.io/docker/stars/chatopera/cmake.svg)](https://hub.docker.com/r/chatopera/cmake/) [![Docker Commit](https://images.microbadger.com/badges/commit/chatopera/cmake:3.14.3.svg)](https://microbadger.com/images/chatopera/cmake:3.14.3 "Get your own commit badge on microbadger.com")
+
 # cpp-kick-starter
 
-Cpp Project Skeleton.
+Are you ready to make magic with C++ in minutes?
+
+## Featured
+
+- gtest
+- glog
+- gflags
+- thrift
+- cross platform for docker funs
 
 ## Prerequisites
 
@@ -12,18 +22,20 @@ You will need:
 
 ## Bootstrap
 
-Run a docker instance and start work.
+Run a docker instance and just work, no efforts to install deps.
 
 ```
 ./admin/dev.sh
 ```
 
+For the docker image used by this project, check out [chatopera/cmake:3.14.3](https://cloud.docker.com/u/chatopera/repository/docker/chatopera/cmake)
+
 ## Install Deps
 
-Install the basic dependencies.
+If you still want to install the basic dependencies by your side, run below script.
 
 ```
-./admin/install-3rd.sh
+./admin/install-3rd.sh # it is for Ubuntu only currently.
 ```
 
 This script would execute every command in `cmake/install` in order.
@@ -31,32 +43,52 @@ This script would execute every command in `cmake/install` in order.
 ## Development
 
 ```
+cd cpp-kick-starter
+# build
 mkdir -p build/debug
 cd build/debug
 cmake ../..
-make && make install
-cd ../..
-bin/divider_tests
+make
+# run
+src/divider/divider 1 5
+
+# run tests
+src/divider/divider_tests
+
+# install
+make install
 ```
 
 ## Project Structure
 
 There are three empty folders: `lib`, `bin`, and `include`. Those are populated by `make install`.
 
-The rest should be obvious: `src` is the sources, and `test` is where we put our unit tests.
+The rest should be obvious: `src` is the sources.
 
 Now we can build this project, and below we show three separate ways to do so.
 
 ## File Locations
 
 - `src/*` — C++ code that ultimately compiles into a library
-- `test/lib` — C++ libraries used for tests (eg, Google Test)
-- `test/src` — C++ test suite
+- `src/*/*_test.cpp` - C++ code to test each component.
 - `bin/`, `lib`, `include` are all empty directories, until the `make install` install the project artifacts there.
 
-Tests:
+### There are two components in `src/` for demo purpose.
 
-- A `test` folder with the automated tests and fixtures that mimics the directory structure of `src`.
-- For every C++ file in `src/A/B/<name>.cpp` there is a corresponding test file `test/A/B/<name>_test.cpp`
-- Tests compile into a single binary `test/bin/runner` that is run on a command line to run the tests.
-- `test/lib` folder with a git submodule in `test/lib/googletest`, and possibly other libraries.
+- `src/division` - a library.
+- `src/divider` - an executable target which depends on `division` as a lib.
+
+## Help
+
+- [Get started with CMake](https://github.com/chatopera/cmake-get-started)
+
+## Copyright
+
+Copyright (2018) <a href="https://www.chatopera.com/" target="_blank">北京华夏春松科技有限公司</a>
+
+[Apache License Version 2.0](https://github.com/chatopera/cpp-kick-starter/blob/master/LICENSE)
+
+[![chatoper banner][co-banner-image]][co-url]
+
+[co-banner-image]: https://user-images.githubusercontent.com/3538629/42383104-da925942-8168-11e8-8195-868d5fcec170.png
+[co-url]: https://www.chatopera.com
