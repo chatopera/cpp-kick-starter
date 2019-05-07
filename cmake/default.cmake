@@ -3,7 +3,6 @@ find_package(Threads REQUIRED)
 include_directories(${THREADS_INCLUDE_DIR})
 link_libraries(${THREADS_LIBRARY})
 
-
 # Google Flags
 find_package(GFlags REQUIRED)
 include_directories(${GFLAGS_INCLUDE_DIR})
@@ -18,3 +17,7 @@ link_libraries(${GLOG_LIBRARY})
 find_package(Thrift REQUIRED)
 include_directories(${THRIFT_INCLUDE_DIR})
 link_libraries(${THRIFT_LIBRARIES})
+
+# miscs
+## print basic info
+include(cmake/miscs/001.printinfo.cmake REQUIRED)

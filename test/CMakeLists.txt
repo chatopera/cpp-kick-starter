@@ -1,3 +1,6 @@
+########################################
+# Add testcases
+########################################
 cmake_minimum_required(VERSION 3.2)
 project(divider_tests)
 
@@ -12,4 +15,3 @@ add_executable(divider_tests main.cpp ${TEST_SRC})
 
 target_link_libraries(divider_tests division gtest)
 install(TARGETS divider_tests DESTINATION bin)
-
