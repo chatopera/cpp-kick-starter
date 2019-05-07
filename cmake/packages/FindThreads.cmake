@@ -11,6 +11,7 @@ set ( THREADS_LIBRARY ${Threads_LIBRARY} )
 set ( THREADS_INCLUDE_DIR ${Threads_INCLUDE_DIR} )
 
 include ( FindPackageHandleStandardArgs )
+MESSAGE(STATUS "THREADS_LIBRARY --> " ${THREADS_LIBRARY})
 # handle the QUIETLY and REQUIRED arguments and set Threads_FOUND to TRUE
 # if all listed variables are TRUE
 find_package_handle_standard_args ( Threads DEFAULT_MSG Threads_LIBRARY Threads_INCLUDE_DIR )

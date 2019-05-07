@@ -17,9 +17,9 @@ SUDO_CMD=""
 echo "Install pthread ..."
 
 which sudo
-
 if [ $? -eq 0 ]; then
     SUDO_CMD=sudo
 fi
+
 set -x
 $SUDO_CMD apt-get install -y libpthread-stubs0-dev
